@@ -9,12 +9,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - run: npm i yarn
-      - run: yarn
-      - run: yarn add --dev gh-pages
-      - run: git config --global user.email "455711093@qq.com"
-      - run: git config --global user.name "lihqi"
-      - run: yarn run deploy
+        run: ../scripts/decrypt_secret.sh
+      # - run: npm i yarn
+      # - run: yarn
+      # - run: yarn add --dev gh-pages
+      # - run: git config --global user.email "455711093@qq.com"
+      # - run: git config --global user.name "lihqi"
+      # - run: yarn run deploy
     # - name: Build and Deploy
     #   uses: JamesIves/github-pages-deploy-action@master
     #   env:

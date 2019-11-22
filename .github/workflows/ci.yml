@@ -9,13 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - run: git config  user.email "455711093@qq.com"
+      - run: git config  user.name "lihqi"
       - name: install and deploy 
         run: ./.github/scripts/deploy-circleci.sh
       # - run: npm i yarn
       # - run: yarn
       # - run: yarn add --dev gh-pages
-      - run: git config  user.email "455711093@qq.com"
-      - run: git config  user.name "lihqi"
+
       # - run: yarn run deploy
     # - name: Build and Deploy
     #   uses: JamesIves/github-pages-deploy-action@master

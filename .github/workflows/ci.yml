@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: install and deploy 
         run: ../scripts/decrypt_secret.sh
       # - run: npm i yarn
       # - run: yarn
